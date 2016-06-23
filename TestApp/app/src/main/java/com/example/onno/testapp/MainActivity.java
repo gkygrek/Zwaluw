@@ -20,9 +20,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         Button button = (Button) findViewById(R.id.button1);
         Button button2 = (Button) findViewById(R.id.button2);
         Button button3 = (Button) findViewById(R.id.button3);
+
         context = this.getApplicationContext();
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,8 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(context,Main2Activity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
-                                      }
-                                  });
+        }});
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
